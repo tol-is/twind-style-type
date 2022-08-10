@@ -11,6 +11,10 @@ const variants = style({
 
 type VariantParams = Parameters<typeof variants>[0];
 
+export type ComponentProps = VariantParams & {
+  disabled?: boolean;
+};
+
 export type AlternateComponentProps = {
   layout: VariantParams["layout"];
   disabled?: boolean;
